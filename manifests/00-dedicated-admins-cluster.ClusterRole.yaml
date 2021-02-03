@@ -242,3 +242,41 @@ rules:
   verbs:
   - get
 ### END - customer can access openshift haproxy router metrics
+### BEGIN - customer can customize the logo on Openshift Console login page
+- apiGroups:
+  - operator.openshift.io
+  resources:
+  - consoles
+  resourceNames:
+  - cluster
+  verbs:
+  - edit
+  - get
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - operator.openshift.io
+  resources:
+  - consoles
+  verbs:
+  - list
+  - get
+  - watch
+- apiGroups:
+  - config.openshift.io
+  resources:
+  - clusteroperators
+  resourceNames:
+  - console
+  verbs:
+  - get
+### END - customer can customize the logo on Openshift Console login page
+### BEGIN - customer can customize the logo on Openshift Console login page
+- apiGroups:
+  - console.openshift.io
+  resources:
+  - consoleclidownloads
+  verbs:
+  - '*'
+### END - customer can customize the logo on Openshift Console login page
